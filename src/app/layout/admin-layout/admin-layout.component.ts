@@ -1,13 +1,16 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-admin-layout',
+  selector: 'admin-layout',
   templateUrl: './admin-layout.component.html',
   styleUrls: ['./admin-layout.component.css']
 })
 export class AdminLayoutComponent {
-
+  isShowSideNav = false;
   constructor() {
   }
-  showFiller = false;
+
+  toggleSideBar(){
+    this.isShowSideNav = !this.isShowSideNav;
+  }
 }
