@@ -10,20 +10,30 @@ import { SampleComponent } from './compnents/base/sample/sample.component';
 import {MatIconModule} from "@angular/material/icon";
 import {MatToolbarModule} from "@angular/material/toolbar";
 import { HeaderComponent } from './layout/header/header.component';
+import { MainMenuComponent } from './layout/admin-layout/main-menu/main-menu.component';
+import { CitiesComponent } from './compnents/base/cities/cities.component';
+import { CategoryInfoComponent } from './compnents/base/category/category-info/category-info.component';
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {MatInputModule} from "@angular/material/input";
+import {MatTabsModule} from "@angular/material/tabs";
+import {MaterialModule} from "./modules/material.modules";
 @NgModule({
   declarations: [
     AppComponent,
     AdminLayoutComponent,
     SampleComponent,
-    HeaderComponent
+    HeaderComponent,
+    MainMenuComponent,
+    CitiesComponent,
+    CategoryInfoComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatSidenavModule,
-    MatIconModule,
-    MatToolbarModule,
+    ReactiveFormsModule,
+    FormsModule,
+    MaterialModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

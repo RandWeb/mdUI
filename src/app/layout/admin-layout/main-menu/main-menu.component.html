@@ -1,0 +1,10 @@
+<ul class="main-menu">
+  <li *ngFor="let menu of menuItems; trackBy:menuTrackBy">
+    <a mat-button [routerLink]="menu.path" routerLinkActive="active-menu-item">{{menu.title}}</a>
+    <ul *ngIf="menu.children.length != 0">
+      <li *ngFor="let subMenu of menu.children; trackBy:menuTrackBy">
+        <a mat-button [routerLink]="subMenu.path" routerLinkActive="active-menu-item">{{subMenu.title}}</a>
+      </li>
+    </ul>
+  </li>
+</ul>

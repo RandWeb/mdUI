@@ -1,0 +1,48 @@
+<div class="category-info-content">
+  <mat-toolbar color="primary">
+    <span class="fill-remaining-space">ثبت اطلاعات گروه محصول</span>
+  </mat-toolbar>
+
+  <div class="container" *ngIf="!post; else forminfo" novalidate>
+    <form [formGroup]="formGroup" (ngSubmit)="onSubmit(formGroup.value)" class="form">
+      <mat-form-field class="form-element">
+        <input matInput placeholder="نام گروه" formControlName="categoryName">
+        <mat-error *ngIf="!categoryName.valid && categoryName.touched">
+          نام گروه اجباری می باشد
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="form-element">
+        <textarea matInput placeholder="توضیحات" matTextareaAutosize matAutosizeMinRows="2" matAutosizeMaxRows="5"
+                  formControlName="description"></textarea>
+        <mat-error *ngIf="!description.valid && description.touched">
+
+          <span *ngIf="description.errors?.['minlength']">
+                 توضیحات حداقل باید 6 حرف داشته باشد
+          </span>
+          <span *ngIf="description.errors?.['required']">
+                توضیحات اجباری می باشد
+          </span>
+        </mat-error>
+      </mat-form-field>
+
+      <div class="form-element">
+        <button mat-raised-button color="primary" type="submit" class="button" [disabled]="!formGroup.valid">ذخیره
+        </button>
+      </div>
+
+    </form>
+    <mat-tab-group>
+      <mat-tab label="مشخصات فنی"> محتوای تب 1</mat-tab>
+      <mat-tab label="توضیحات">محتوای تب 2</mat-tab>
+      <mat-tab label="نظرات کاربران"> محتوای تب 3</mat-tab>
+    </mat-tab-group>
+  </div>
+
+  <ng-template #forminfo>
+    <div class="container">
+      {{ post | json }}
+    </div>
+  </ng-template>
+
+</div>

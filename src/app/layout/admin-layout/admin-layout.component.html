@@ -1,10 +1,15 @@
 <mat-drawer-container class="example-container" autosize>
   <mat-drawer #drawer class="example-sidenav" mode="side" [opened]="isShowSideNav">
-  <h2>company name</h2>
+    <h2 class="right-panel-title">پنل مدیریت</h2>
+    <main-menu></main-menu>
   </mat-drawer>
 
   <div class="example-sidenav-content">
     <header class="example-spacer" (sideNavToggle)="toggleSideBar()"></header>
+    <div class="main-content">
+      <router-outlet></router-outlet>
+    </div>
+
   </div>
 
 </mat-drawer-container>

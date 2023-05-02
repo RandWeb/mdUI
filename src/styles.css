@@ -1,4 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
 
+
+@font-face {
+  font-family: 'Samim';
+  src: url('./assets/fonts/Samim.eot'); /* IE9 Compat Modes */
+  src: url('./assets/fonts/Samim.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('./assets/fonts/Samim.woff2') format('woff2'), /* Super Modern Browsers */
+  url('./assets/fonts/Samim.woff') format('woff'), /* Pretty Modern Browsers */
+  url('./assets/fonts/Samim.ttf')  format('truetype') /* Safari, Android, iOS */
+}
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { margin: 0; font-family:Samim, "Helvetica Neue", sans-serif; }
+.samim{
+  font-family:Samim !important;
+}
