@@ -1,2 +1,10 @@
+<ng-container *ngIf="isAuthenticate; else elseTemplate">
+  <admin-layout></admin-layout>
+</ng-container>
 
-<admin-layout></admin-layout>
+<ng-template #elseTemplate>
+  <login></login>
+</ng-template>
+<!--
+<router-outlet></router-outlet>
+-->

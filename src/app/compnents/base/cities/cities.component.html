@@ -1,1 +1,19 @@
-<p>cities works!</p>
+<h2>فهرست شهرها</h2>
+
+<ul>
+  <li *ngFor="let city of cities | slice:2:5; trackBy:getTrackById">
+    <span> {{city.name}}</span>
+  </li>
+</ul>
+
+<h2>with custom directive</h2>
+
+<ul>
+  <li *appMyFor="let city of cities;let i = index;">
+    <span> {{city.name}}</span>
+  </li>
+</ul>
+<h4 [ngStyle]="{'background-color':salePercent > 3 ? 'green' : 'red' }">Date : {{salePercent | percent}}</h4>
+<h4>Date : {{currentDate | date:'full'}}</h4>
+<h4 appHighlight="red">persian Date : {{currentDate | persianDate}}</h4>
+<h4 appHighlight>cities : {{cities | json}}</h4>

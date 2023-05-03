@@ -12,7 +12,7 @@ export class MainMenuComponent implements OnInit {
     new MenuItem(2, 'اطلاعات پایه', '/base',[
       new MenuItem(3,'گروه بندی محصولات','/base/categories'),
       new MenuItem(4,'شهرها','/base/cities'),
-    ]),
+    ])
   ];
   menuTrackBy(index:number,menuItem:MenuItem):number{
     return menuItem.id;

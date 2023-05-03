@@ -17,6 +17,11 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {MatInputModule} from "@angular/material/input";
 import {MatTabsModule} from "@angular/material/tabs";
 import {MaterialModule} from "./modules/material.modules";
+import { PersianDatePipe } from './pipes/persian-date.pipe';
+import { LoginComponent } from './compnents/authenticate/login/login.component';
+import {HttpClientModule} from "@angular/common/http";
+import { HighlightDirective } from './directives/highlight.directive';
+import { MyForDirective } from './directives/my-for.directive';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +30,11 @@ import {MaterialModule} from "./modules/material.modules";
     HeaderComponent,
     MainMenuComponent,
     CitiesComponent,
-    CategoryInfoComponent
+    CategoryInfoComponent,
+    PersianDatePipe,
+    LoginComponent,
+    HighlightDirective,
+    MyForDirective
   ],
   imports: [
     BrowserModule,
@@ -34,6 +43,7 @@ import {MaterialModule} from "./modules/material.modules";
     ReactiveFormsModule,
     FormsModule,
     MaterialModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
